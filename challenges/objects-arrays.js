@@ -76,6 +76,10 @@ const graduates = [
   { id: 10, first_name: "Hube", university: "Universitat Rovira I Virgili Tarragona", email: "hlethbrig9@foxnews.com" },
 ];
 
+
+
+
+
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
@@ -101,7 +105,14 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
+    for (let i = 0; i < graduates.length; i++){
+        if (graduates[i].university.search("Uni") > 0){
+          unisWithUni.push(graduates[i].university)
+      }
+    }
 console.log(unisWithUni);
+
+
 
 
 // ==== ADVANCED Array Methods ====
