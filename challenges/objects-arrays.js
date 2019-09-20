@@ -138,7 +138,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(function(items){
+zooAnimals.forEach((items)=>{
   return displayNames.push(`${items.animal_name} ${items.scientific_name}`);
 });
 console.log(displayNames);
@@ -150,7 +150,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 const lowCaseAnimalNames = [];
- lowerCaseAnimalNames = zooAnimals.map(function(item){
+ lowerCaseAnimalNames = zooAnimals.map((item)=>{
   return lowCaseAnimalNames.push(item.animal_name.toLowerCase());  
 });
 console.log(lowCaseAnimalNames);
@@ -161,7 +161,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
- lowPopulation = zooAnimals.filter(function(item){
+ lowPopulation = zooAnimals.filter((item) =>{
    if (item.population<5)
       {return lowPopulationAnimals.push(item);}
 });
@@ -173,7 +173,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 let populationTotal = 0;
-populationTotal = zooAnimals.reduce(function(accumulator, item){
+populationTotal = zooAnimals.reduce((accumulator, item) =>{
   return accumulator + item.population;
 }, 0);
 console.log(`The total zoo animal population is ${populationTotal}`);
@@ -185,4 +185,6 @@ console.log(`The total zoo animal population is ${populationTotal}`);
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
+
+
 

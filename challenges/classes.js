@@ -35,8 +35,6 @@ class CubeMakers extends CuboidMakers{
 }
 
 
-
-
     const cuboids = new CuboidMakers({
       lengths: 4,
       widths: 5,
